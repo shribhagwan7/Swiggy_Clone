@@ -1,0 +1,59 @@
+import { Link } from "react-router";
+
+function Header() {
+    return (
+        <header className="bg-[#ff5200]">
+
+            {/* Top header */}
+
+            <div className="flex justify-between container mx-auto py-4">
+                <div className="flex items-center">
+                    <img className="w-16 h-16 cursor-pointer" src="data:image/jpeg;base64,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"></img>
+                    <h1 className="text-xl font-bold text-white cursor-pointer">Swiggy</h1>
+                </div>
+                <div className="flex gap-16 items-center font-bold text-base text-white">
+                    <a className="hover:underline" target="_blank" href="https://www.swiggy.com/corporate/">Swiggy Corporate</a>
+                    <a className="hover:underline" target="_blank" href="https://partner.swiggy.com/login#/swiggy">Partner with Us</a>
+                    <button className="border-2 rounded-2xl px-6 py-2 cursor-pointer transition-transform duration-300 hover:scale-105">Get The App</button>
+                    <div className="flex gap-6">
+                        <button className="border-2 border-black rounded-2xl px-6 py-2 cursor-pointer bg-black transition-transform duration-300 hover:scale-105">Sign Up</button>
+                        <button className="border-2 border-black rounded-2xl px-6 py-2 cursor-pointer bg-black transition-transform duration-300 hover:scale-105">Login</button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Middle header */}
+
+            <div className="pt-16 pb-8 relative">
+                <img className="h-110 w-60 absolute left-0 top-0" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Veggies_new.png"></img>
+                <img className="h-110 w-60 absolute right-0 top-0" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png"></img>
+                <div className="max-w-[60%] text-4xl text-white font-bold container mx-auto text-center">
+                    Order Food and groceries. Discover best restaurants. Swiggy it!
+                </div>
+                <div className="max-w-[70%] flex justify-center container mx-auto mt-10 gap-5">
+                    <input className="bg-white w-[20%] px-5 py-3 rounded-2xl outline-none text-center" placeholder="Delhi, India..."></input>
+                    <input className="bg-white w-[50%] px-5 py-3 rounded-2xl outline-none text-center" placeholder="Search for restaurant and items for more..."></input>
+                </div>
+            </div>
+
+            {/* Bottom header */}
+
+            <div className="max-w-[80%] container mx-auto flex">
+                <Link to="/restaurant">
+                    <img className="transition-transform duration-300 hover:scale-105" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/1/fa01e85b-3057-482d-9523-5289722b1df2_Food4BU.png"></img>
+                </Link>
+                <a target="_blank" href="https://www.swiggy.com/instamart?entryId=1234&entryName=mainTileEntry4&v=1">
+                    <img className="transition-transform duration-300 hover:scale-105" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/16/ca34e375-f1bd-4a2e-a3e7-0a20833be83b_IM4BU1.png"></img>
+                </a>
+                <a target="_blank" href="https://www.swiggy.com/dineout">
+                    <img className="transition-transform duration-300 hover:scale-105" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/1/76c30e5a-8adb-4795-bf5b-fa64e9e9e1d3_DO4BU.png"></img>
+                </a>
+                <a target="_blank" href="https://www.swiggy.com/genie">
+                    <img className="transition-transform duration-300 hover:scale-105" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/31/14033c0b-8907-420b-b72a-d26cfa68dc7b_Genie4BU.png"></img>
+                </a>
+            </div>
+        </header>
+    )
+}
+
+export default Header;
